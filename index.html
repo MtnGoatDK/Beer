@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Beer Searcher</title>
+</head>
+<body>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="js.cookie-2.2.1.min.js"></script>
+    <script src="script.js"></script>
+    
+    <div class="header">
+        <div class="header-center">
+            <h1>
+                <i class="fas fa-beer"></i> BeerSearcher
+            </h1>
+        </div>
+        
+    </div>
+
+    <div class="searcharea">
+        <div class="row">
+            <div class="col-8 offset-0 col-lg-4 offset-lg-3 col-sm-6 offset-sm-2">
+              <input id="beernamesearch" type="text" class="form-control" placeholder="Search by Beer Name" style="margin-top:5px">
+              <input id="beerfoodsearch" type="text" class="form-control" placeholder="Search by Food Pairings" style="margin-top:10px">
+            </div>
+            <div class="col">
+                <div class="">
+                    <input type="radio" id="customRadioInline0" name="abvradio" class="custom-control-input" value="0" checked="checked">
+                    <label class="custom-control-label" for="customRadioInline0">Any %</label>
+                </div>
+                <div class="">
+                    <input type="radio" id="customRadioInline1" name="abvradio" class="custom-control-input" value="1">
+                    <label class="custom-control-label" for="customRadioInline1">&lt; 4.5%</label>
+                </div>
+                  <div class="">
+                    <input type="radio" id="customRadioInline2" name="abvradio" class="custom-control-input" value="2">
+                    <label class="custom-control-label" for="customRadioInline2">4.5% - 7.5%</label>
+                </div>
+                  <div class="">
+                    <input type="radio" id="customRadioInline3" name="abvradio" class="custom-control-input" value="3"> 
+                    <label class="custom-control-label" for="customRadioInline3">	&gt; 7.5%</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="mx-auto">
+                <button id="clearsearchbtn" class="btn" onclick="clearSearch()">Clear Search</button>
+                <button id="beersearchbtn" class="btn" onclick="searchBeers()">Search</button>
+                <button id="favsbtn" class="btn" onclick="searchFavs()">Search Favorites</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content col-lg-10 col-sm-12 offset-lg-1">
+
+        
+
+        <div id=beers>
+        </div>
+       
+    </div>
+
+</body>
+</html>
